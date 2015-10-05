@@ -7,29 +7,30 @@ import com.badlogic.gdx.utils.viewport.StretchViewport;
 
 public class MyGdxGame extends ApplicationAdapter {
 
-    private GameStage stage;
+    private GameStage game;
+    private MenuStage menu;
 
     @Override
     public void create() {
-        stage = new GameStage(new StretchViewport(320, 480));
-        Gdx.input.setInputProcessor(stage);
+        game = new GameStage(new StretchViewport(320, 480));
+        Gdx.input.setInputProcessor(game);
     }
 
     @Override
     public void resize(int width, int height) {
-        stage.getViewport().update(width, height, true);
+        game.getViewport().update(width, height, true);
     }
 
     @Override
     public void render() {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        stage.act();
-        stage.draw();
+        game.act();
+        game.draw();
     }
 
     @Override
     public void dispose() {
-        stage.dispose();
+        game.dispose();
         super.dispose();
     }
 }

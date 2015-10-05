@@ -19,7 +19,6 @@ import com.badlogic.gdx.utils.viewport.Viewport;
  * @author Whizzpered
  */
 public class MenuStage extends Stage {
-
     
     private OrthographicCamera cam;
     AssetManager asset;
@@ -41,9 +40,9 @@ public class MenuStage extends Stage {
 
     private void initAssets() {
         asset = new AssetManager();
-        asset.load("tex.pack", TextureAtlas.class);
+        //asset.load("tex.pack", TextureAtlas.class);
         asset.finishLoading();
-        atlas = asset.get("tex.pack");
+        //atlas = asset.get("tex.pack");
     }
 
     public void initCam() {
